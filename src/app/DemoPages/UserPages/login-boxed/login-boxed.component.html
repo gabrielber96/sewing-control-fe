@@ -7,44 +7,83 @@
           <div class="modal-body">
             <div class="h5 modal-title text-center">
               <h4 class="mt-2">
-                <div>Welcome back,</div>
-                <span>Please sign in to your account below.</span></h4>
+                <div>Bienvenido,</div>
+                <span>Inicie sesión en su cuenta a continuación.</span>
+              </h4>
             </div>
-            <div id="exampleInputGroup1" role="group" aria-describedby="exampleInputGroup1__BV_description_"
-                 class="form-group">
-              <div><input id="exampleInput1" type="email" placeholder="Enter email..." required="required"
-                          aria-required="true" class="form-control"
-                          aria-describedby="exampleInputGroup1__BV_description_">
-                <small tabindex="-1" id="exampleInputGroup1__BV_description_" class="form-text text-muted">We'll never
-                  share your email with anyone else.
+            <!--     <div
+              id="exampleInputGroup1"
+              role="group"
+              aria-describedby="exampleInputGroup1__BV_description_"
+              class="form-group"
+            >
+              <div>
+                <input
+                  id="exampleInput1"
+                  type="email"
+                  placeholder="Ingrese email..."
+                  required="required"
+                  aria-required="true"
+                  class="form-control"
+                  autocomplete="off"
+                  aria-describedby="exampleInputGroup1__BV_description_"
+                />
+                <small
+                  tabindex="-1"
+                  id="exampleInputGroup1__BV_description_"
+                  class="form-text text-muted"
+                >
+                  Nunca compartiremos su correo electrónico con nadie más..
                 </small>
               </div>
-            </div>
+            </div> -->
             <div id="exampleInputGroup2" role="group" class="form-group">
-              <div><input id="exampleInput2" type="password" placeholder="Enter password..." required="required"
-                          aria-required="true" class="form-control"></div>
+              <div>
+                <input
+                  id="exampleInput2"
+                  type="password"
+                  placeholder="Ingrese contraseña..."
+                  required="required"
+                  aria-required="true"
+                  class="form-control"
+                  autocomplete="off"
+                />
+              </div>
             </div>
-            <div class="custom-control custom-checkbox"><input id="exampleCheck" type="checkbox" name="check"
-                                                               autocomplete="off" class="custom-control-input"
-                                                               value="true"><label for="exampleCheck"
-                                                                                   class="custom-control-label">
-              Keep me logged in
-            </label></div>
+            <!--  <div class="custom-control custom-checkbox">
+              <input
+                id="exampleCheck"
+                type="checkbox"
+                name="check"
+                autocomplete="off"
+                class="custom-control-input"
+                value="true"
+              /><label for="exampleCheck" class="custom-control-label">
+                Keep me logged in
+              </label>
+            </div> -->
             <div class="divider"></div>
             <h6 class="mb-0">
-              No account?
-              <a [routerLink]="" class="text-primary">Sign up now</a></h6></div>
+              ¿No tienes cuenta?
+              <a [routerLink]="" class="text-primary">Regístrate ahora</a>
+            </h6>
+          </div>
           <div class="modal-footer clearfix">
-            <div class="float-left"><a [routerLink]="" class="btn-lg btn btn-link">Recover
-              Password</a></div>
-            <div class="float-right">
-              <button type="button" class="btn btn-primary btn-lg">Login to Dashboard</button>
+            <div class="float-left">
+              <a [routerLink]="" class="btn-lg btn btn-link"
+                >Recuperar contraseña</a
+              >
+            </div>
+            <div (click)="IngresarDashboard()" class="float-right">
+              <button type="button" class="btn btn-primary btn-lg">
+                Ingresar
+              </button>
             </div>
           </div>
         </div>
       </div>
       <div class="text-center text-white opacity-8 mt-3">
-        Copyright © ArchitectUI 2019
+        Copyright © SOSolutions 2021
       </div>
     </div>
   </div>
