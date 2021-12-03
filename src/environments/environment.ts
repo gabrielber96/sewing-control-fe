@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  BACKEND_URL: "http://localhost:3000",
+  BACKEND_URL: "http://157.245.136.250:3000",
   GESTION_URL: "http://localhost:4200",
 };
 

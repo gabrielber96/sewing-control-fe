@@ -25,8 +25,7 @@
             "assets": ["src/favicon.ico", "src/assets/images"],
             "styles": [
               "src/styles.scss",
-              "./node_modules/font-awesome/scss/font-awesome.scss",
-              "node_modules/ngx-toastr/toastr.css"
+              "./node_modules/font-awesome/scss/font-awesome.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true
