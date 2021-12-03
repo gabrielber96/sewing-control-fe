@@ -22,16 +22,13 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets/images"
-            ],
+            "assets": ["src/favicon.ico", "src/assets/images"],
             "styles": [
               "src/styles.scss",
-              "./node_modules/font-awesome/scss/font-awesome.scss"
+              "./node_modules/font-awesome/scss/font-awesome.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": [
-            ],
+            "scripts": [],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -64,7 +61,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "architectui-angular-free:build"
+            "browserTarget": "architectui-angular-free:build",
+            "port": 3400
           },
           "configurations": {
             "production": {
@@ -93,22 +91,14 @@
             "scripts": {
               "fix-memory-limit": "cross-env LIMIT=2048 increase-memory-limit"
             },
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ]
+            "assets": ["src/favicon.ico", "src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -134,9 +124,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
