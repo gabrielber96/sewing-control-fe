@@ -53,6 +53,7 @@ export class ServiciosGenerales {
       ); */
     localStorage.removeItem("system_token");
     localStorage.clear();
+    this.router.navigate([`/pages/login-boxed`]);
   }
 
   RegistrarUser(customer): Observable<any> {

@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   BACKEND_URL: "http://157.245.136.250:3000",
   GESTION_URL: "http://localhost:4200",
+  timeOutmessage: 3000,
 };
 
 /*

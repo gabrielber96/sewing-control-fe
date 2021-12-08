@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { ServiciosGenerales } from "../../service/servicios-generales.service";
+import { ToastrService } from "ngx-toastr";
+import { environment } from "src/environments/environment";
 
 @Component({
   selector: "app-login-boxed",
@@ -12,6 +14,7 @@ export class LoginBoxedComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
+    private toastr: ToastrService,
     private _serviceG: ServiciosGenerales
   ) {}
 
@@ -29,7 +32,7 @@ export class LoginBoxedComponent implements OnInit {
       .subscribe(
         async (userResponse: any) => {
           this.form.reset();
-
+          this.showSuccess();
           this.router.navigate([`/Dashboard`]);
 
           localStorage.setItem("system_token", userResponse["jwt"]);
@@ -47,8 +50,27 @@ export class LoginBoxedComponent implements OnInit {
         },
 
         (error) => {
-          console.log(error);
+          this.toastr.error(error.error.errors[0].msg, "Acceso denegado", {
+            timeOut: environment.timeOutmessage,
+            closeButton: true,
+            progressBar: true,
+          });
         }
       );
+  }
+
+  showSuccess() {
+    this.toastr.success("Datos correctos", "Acceso permitido", {
+      timeOut: environment.timeOutmessage,
+      closeButton: true,
+      progressBar: true,
+    });
+  }
+  showErr() {
+    this.toastr.error("Datos incorrectos", "Acceso denegado", {
+      timeOut: environment.timeOutmessage,
+      closeButton: true,
+      progressBar: true,
+    });
   }
 }

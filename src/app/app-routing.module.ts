@@ -51,6 +51,7 @@ import { LayoutComponent } from "./DemoPages/Forms/Elements/layout/layout.compon
 // Charts
 
 import { ChartjsComponent } from "./DemoPages/Charts/chartjs/chartjs.component";
+import { ListBusinessComponent } from "./view/list-business/list-business.component";
 
 const routes: Routes = [
   {
@@ -109,6 +110,11 @@ const routes: Routes = [
         path: "components/tabs",
         component: TabsComponent,
         data: { extraParameter: "componentsMenu" },
+      },
+      {
+        path: "components/business",
+        component: ListBusinessComponent,
+        data: { extraParameter: "" },
       },
       {
         path: "components/accordions",
